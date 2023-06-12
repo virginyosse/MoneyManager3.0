@@ -22,6 +22,7 @@ class TambahDataFrag : Fragment() {
         val factory = PengeluaranViewModelFactory(db.dao)
 
         ViewModelProvider(this, factory)[PengeluaranViewModel::class.java]
+
     }
 
     override fun onCreateView(
@@ -32,6 +33,8 @@ class TambahDataFrag : Fragment() {
         binding = FragTambahDataBinding.inflate(layoutInflater, container, false)
         binding.simpan.setOnClickListener { setData() }
         return binding.root
+
+
     }
 
     private fun setData() {
@@ -71,4 +74,5 @@ class TambahDataFrag : Fragment() {
     private fun showResult(result: Keuangan?) {
         if (result == null) return
     }
+
 }

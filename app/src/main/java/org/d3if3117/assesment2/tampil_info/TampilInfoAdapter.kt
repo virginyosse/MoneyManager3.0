@@ -2,7 +2,9 @@ package org.d3if3117.assesment2.tampil_info
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import org.d3if3117.assesment2.R
 import org.d3if3117.assesment2.databinding.ListFinanceBinding
 import org.d3if3117.assesment2.databinding.ListItemBinding
 
@@ -23,6 +25,12 @@ class TampilInfoAdapter : RecyclerView.Adapter<TampilInfoAdapter.ViewHolder>() {
             namaTextView.text = finance.judul
             latinTextView.text = finance.contoh
             imageView.setImageResource(finance.image)
+
+            root.setOnClickListener {
+                val message = root.context.getString(R.string.message, finance.judul)
+                Toast.makeText(root.context, message, Toast.LENGTH_LONG).show()
+            }
+
         }
     }
 
