@@ -1,20 +1,14 @@
-package org.d3if3117.assesment2.tampil
+package org.d3if3117.assesment2.tampil_data
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.BaseTransientBottomBar
-import com.google.android.material.snackbar.Snackbar
 import org.d3if3117.assesment2.data.PengeluaranDB
-import org.d3if3117.assesment2.data.PengeluaranEntity
 import org.d3if3117.assesment2.databinding.FragTampilDataBinding
 import org.d3if3117.assesment2.main.PengeluaranViewModel
 import org.d3if3117.assesment2.main.PengeluaranViewModelFactory

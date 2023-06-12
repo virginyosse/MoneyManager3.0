@@ -1,16 +1,10 @@
-package org.d3if3117.assesment2.tampil
+package org.d3if3117.assesment2.tampil_data
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.d3if3117.assesment2.data.PengeluaranEntity
 import org.d3if3117.assesment2.databinding.ListItemBinding
-import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.collections.ArrayList
 
 class TampilDataAdapter(private val list: List<PengeluaranEntity>) :
     RecyclerView.Adapter<TampilDataAdapter.ViewHolder>() {

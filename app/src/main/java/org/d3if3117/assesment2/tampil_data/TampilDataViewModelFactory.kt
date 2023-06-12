@@ -1,4 +1,4 @@
-package org.d3if3117.assesment2.tampil
+package org.d3if3117.assesment2.tampil_data
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
