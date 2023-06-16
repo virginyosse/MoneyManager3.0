@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:selectableItemBackground">
+    tools:context=".tampil_info.TampilInfoFrag"
+  >
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:src="@drawable/housing" />
+        tools:src="@drawable/broken_image" />
 
     <TextView
         android:id="@+id/namaTextView"
@@ -50,4 +51,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

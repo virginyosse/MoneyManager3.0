@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.d3if3117.assesment2.R
 import org.d3if3117.assesment2.databinding.ListFinanceBinding
 import org.d3if3117.assesment2.databinding.ListItemBinding
+import org.d3if3117.assesment2.network.MoneyApi
 
 class TampilInfoAdapter : RecyclerView.Adapter<TampilInfoAdapter.ViewHolder>() {
 
@@ -24,7 +26,12 @@ class TampilInfoAdapter : RecyclerView.Adapter<TampilInfoAdapter.ViewHolder>() {
         fun bind(finance: Finance) = with(binding) {
             namaTextView.text = finance.judul
             latinTextView.text = finance.contoh
-            imageView.setImageResource(finance.image)
+
+            Glide.with(imageView.context)
+                .load(MoneyApi.getMoneyUrl(finance.image))
+                .error(R.drawable.broken_image)
+                .into(imageView)
+
 
             root.setOnClickListener {
                 val message = root.context.getString(R.string.message, finance.judul)
@@ -40,9 +47,8 @@ class TampilInfoAdapter : RecyclerView.Adapter<TampilInfoAdapter.ViewHolder>() {
         return ViewHolder(binding)
 
     }
-
-
-    override fun getItemCount(): Int {
+    
+override fun getItemCount(): Int {
         return data.size
     }
 
